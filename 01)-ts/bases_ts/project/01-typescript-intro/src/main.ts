@@ -7,7 +7,8 @@ import './style.css'
 //import './topics/06-fuction-destructuring';
 //import './topics/07-import-export';
 //import './topics/08-classes';
-import './topics/08-classes-composicion'
+//import './topics/08-classes-composicion'
+import './topics/09-generics';
 //import { setupCounter } from './counter.ts'
 
 const app = document.querySelector<HTMLDivElement>('#app');
