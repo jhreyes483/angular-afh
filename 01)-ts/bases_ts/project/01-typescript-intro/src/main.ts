@@ -1,10 +1,11 @@
 import './style.css'
-import { setupCounter } from './counter.ts'
+import './topics/01-basic-types'
+//import { setupCounter } from './counter.ts'
 
 const app = document.querySelector<HTMLDivElement>('#app');
 app!.innerHTML = `
-Hola type script
+Hola typeScript
 `;
 
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+console.log('main is run');
+//setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
