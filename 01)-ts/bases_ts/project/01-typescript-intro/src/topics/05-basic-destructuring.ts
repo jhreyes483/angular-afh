@@ -20,11 +20,17 @@ const audioPlayer: AudioPlayer = {
     }
 }
 
-/* destructuracion */
+/* destructuracion objetos */
 const { details } = audioPlayer;
 const { author } = details
 
 const { song: anotherSong, songDuration: duration } = audioPlayer;
-console.log(anotherSong, duration, author)
+console.log('destructuracion objetos' ,anotherSong, duration, author)
+
+/* destructureacion arrays*/
+const dbz : string[] = ['Goku','Vegeta', 'Trunks'];
+
+const [,,trunks]  = dbz;
+console.log('destructuracion arrays', trunks);
 
 export { };

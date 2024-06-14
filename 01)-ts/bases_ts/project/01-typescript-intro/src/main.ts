@@ -3,7 +3,9 @@ import './style.css'
 //import './topics/02-object-interface';
 //import './topics/03-functions-and-interface';
 //import './topics/04-homework-types';
-import './topics/05-basic-destructuring'
+//import './topics/05-basic-destructuring'
+import './topics/06-fuction-destructuring';
+
 
 //import { setupCounter } from './counter.ts'
 
