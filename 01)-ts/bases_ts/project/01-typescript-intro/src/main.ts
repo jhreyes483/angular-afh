@@ -8,8 +8,8 @@ import './style.css'
 //import './topics/07-import-export';
 //import './topics/08-classes';
 //import './topics/08-classes-composicion'
-import './topics/09-generics';
-//import { setupCounter } from './counter.ts'
+//import './topics/09-generics';
+import './topics/10-decoradores'
 
 const app = document.querySelector<HTMLDivElement>('#app');
 app!.innerHTML = `

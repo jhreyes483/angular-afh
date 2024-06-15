@@ -12,3 +12,5 @@ let amIArray = whatsMyType<number[]>([1,2,3,4,5]);
 console.log(amIString.split(' '));
 console.log(amNumber.toFixed());
 console.log(amIArray.join('-'));
+
+// QUEDE EN 30 DECORADORES 
