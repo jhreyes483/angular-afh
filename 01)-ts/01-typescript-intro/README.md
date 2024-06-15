@@ -7,8 +7,7 @@
 ## levantar proyecto 
 - npm run dev
 
-
-### code  example
+### code example
 - https://github.com/Klerith/angular-introduccion-typescript
 
 
