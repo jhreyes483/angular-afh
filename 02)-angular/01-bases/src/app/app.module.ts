@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+
+/* modulos */
+import { CounterModule } from './counter/counter.module';
+
+/* componentes */
 import { AppComponent } from './app.component';
-import { CounterComponent } from './counter/counter.component';
 import { HeroComponent } from './heroes/hero/hero.component';
 import { ListComponent } from './heroes/list/list.component';
+
 
 
 
@@ -13,12 +17,15 @@ import { ListComponent } from './heroes/list/list.component';
   declarations: [
     AppComponent,
 
-    /** Importacion de modulos */
-    CounterComponent,
+    /** Importacion de componentes */
       HeroComponent,
       ListComponent,
   ],
   imports: [
+    /* modules */
+    CounterModule,
+    /****** */
+
     BrowserModule,
     AppRoutingModule
   ],
