@@ -35,7 +35,6 @@ export class ListComponent {
   ]
   public  deleteHero : any;
 
-
   constructor(){
     this.deleteHero = new Hero (0,'');
   }

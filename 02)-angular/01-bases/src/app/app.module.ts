@@ -4,11 +4,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 /* modulos */
 import { CounterModule } from './counter/counter.module';
-
+import { HeroModule } from './heroes/heroes.module';
 /* componentes */
 import { AppComponent } from './app.component';
-import { HeroComponent } from './heroes/hero/hero.component';
-import { ListComponent } from './heroes/list/list.component';
+//import { HeroComponent } from './heroes/hero/hero.component';
+//import { ListComponent } from './heroes/list/list.component';
+
 
 
 
@@ -18,12 +19,13 @@ import { ListComponent } from './heroes/list/list.component';
     AppComponent,
 
     /** Importacion de componentes */
-      HeroComponent,
-      ListComponent,
+  //    HeroComponent,
+  //    ListComponent,
   ],
   imports: [
     /* modules */
     CounterModule,
+    HeroModule,
     /****** */
 
     BrowserModule,
