@@ -18,11 +18,16 @@ export class HeroComponent {
       return `${this.name} - ${ this.age }`
     }
 
-    chagenAge(){
+    changeAge(){
       this.name = 'Se cambio el nombre';
     }
 
     changeHero(){
       this.age = 33
+    }
+
+    resetForm(){
+      this.name = 'ironmain'
+      this.age = 45
     }
 }
