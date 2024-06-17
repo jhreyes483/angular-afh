@@ -1,0 +1,16 @@
+<form name="formCreate" action="" #formCreate="ngForm" class="row">
+  <input
+  #name="ngModel" [(ngModel)]="dbz.name"
+  required id="name" name="name" type="text" class="form-control mb-2" placeholder="name" required>
+  <small *ngIf="!dbz.name && name.touched" class="invalid-feedback d-block">
+     name no valido
+  </small>
+
+  <input #poder="ngModel" [(ngModel)]="dbz.poder" required id="poder" name="poder" class="form-control mb-2" type="number"  pattern="[0-9]+"  placeholder="poder" autocomplete="off" required>
+  <small *ngIf="!poder.valid && poder.touched" class="invalid-feedback d-block">
+      Ingresa solo números
+  </small>
+
+  <button type="submit" class="btn btn-primary" [disabled]="formCreate.invalid">Ingresar <i class="fas fa-sign-in-alt"></i></button>
+
+</form>

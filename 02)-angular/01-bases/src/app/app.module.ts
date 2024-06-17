@@ -5,13 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 /* modulos */
 import { CounterModule } from './counter/counter.module';
 import { HeroModule } from './heroes/heroes.module';
+import { DbzModule }from './dbz/dbz.module';
 /* componentes */
 import { AppComponent } from './app.component';
 //import { HeroComponent } from './heroes/hero/hero.component';
 //import { ListComponent } from './heroes/list/list.component';
-
-
-
 
 
 @NgModule({
@@ -26,6 +24,7 @@ import { AppComponent } from './app.component';
     /* modules */
     CounterModule,
     HeroModule,
+    DbzModule,
     /****** */
 
     BrowserModule,

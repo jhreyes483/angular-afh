@@ -9,6 +9,10 @@
 - node 10.5.2
 - node v20.13.1
 
+## genrar un modulo
+- ng g m moduleName
+## generar un componente
+- ng g c moduleName/components/componentName
 
 ### atajos extención 
 - a-component: crea ts componente 
