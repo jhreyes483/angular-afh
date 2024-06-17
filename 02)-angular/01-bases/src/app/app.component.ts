@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bases';
+  public title = 'aapp ini';
+  public counterIni = 10;
+  public counter = this.counterIni;
+
+
+  increaseBy(number: number) : void{
+   this.counter += number;
+  }
+
+  resetBy(){
+    this.counter = this.counterIni
+  }
 }
