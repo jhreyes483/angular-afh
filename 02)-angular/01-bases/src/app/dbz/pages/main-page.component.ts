@@ -17,7 +17,7 @@ export class MainPageComponent {
     return [...this._dbzService.characters]
   }
 
-  onDeleteCharacter( id: string){
+  onDeleteCharacter(id: string){
     this._dbzService.deleteCharecterById(id)
   }
 

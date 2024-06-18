@@ -17,13 +17,6 @@ export class AddCharacterComponent {
     this.character = new Character(0,'',0);
    }
 
-  /**
-  anexar esta propiedad al constructor de esta clase
-  constructor(){
-   this.character = new Character
-  }
-  */
-  /** este es el evento que se debe pegar en esta clase para emitir a componente hijo */
   emitCharacter(form: any): void {
    this.onNewCharacter.emit(this.character )
   }

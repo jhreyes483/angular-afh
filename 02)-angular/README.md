@@ -16,3 +16,6 @@
 
 ### atajos extención 
 - a-component: crea ts componente 
+
+### build
+- ng build

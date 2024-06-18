@@ -11,9 +11,9 @@ export class ListComponent {
   public charactersList : Character[] = [
     /** valor por default*/
     {
-      id: 1,
-      name: 'Tronks',
-      power: 10
+      id: '',
+      name: '',
+      power: 0
     },
   ];
 
