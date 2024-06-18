@@ -8,14 +8,13 @@ import { Character } from '../../interfaces/character.intarface';
 })
 export class ListComponent {
   @Input() /** entrada de objeto de componente (este es componente hijo) */
-  public charactersList: Character[] = [
+  public charactersList : Character[] = [
     /** valor por default*/
     {
       id: 1,
       name: 'Tronks',
       power: 10
     },
-
   ];
 
 

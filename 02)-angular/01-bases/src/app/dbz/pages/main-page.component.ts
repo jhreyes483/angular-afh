@@ -28,4 +28,7 @@ export class MainPageComponent {
     }
   ];
 
+  onNewCharacter(character : Character){
+    console.log('component father', character);
+   }
 }
