@@ -1,13 +1,5 @@
 import { Component } from '@angular/core';
-
-export class Dbz {
-  constructor(
-    public id: any,
-    public name : string,
-    public poder : number
-    ) {}
-}
-
+import { Character } from '../../interfaces/character.intarface';
 
 @Component({
   selector: 'dbz-add-character',
@@ -15,9 +7,13 @@ export class Dbz {
   styleUrl: './add-character.component.css'
 })
 export class AddCharacterComponent {
-  public dbz : any;
+  public character : any;
   constructor(){
-    this.dbz = new Dbz(0, '',0);
+    this.character = new Character(0, '',0);
+  }
+
+  emitCharacter(form : any) : void{
+    console.log(this.character)
   }
 
 }
