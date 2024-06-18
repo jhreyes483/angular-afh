@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import { Character } from '../interfaces/character.intarface';
+import { Injectable } from "@angular/core";
+import { Character } from "../interfaces/character.intarface";
 
-@Component({
-  selector: 'app-dbz-main-page',
-  templateUrl: './main-page.component.html'
-})
 
-export class MainPageComponent {
+@Injectable({providedIn: 'root'})
+export class ServiceName  {
 
+  constructor() {
+
+  }
 
   public characters: Character[] = [
     {
@@ -38,6 +38,7 @@ export class MainPageComponent {
     console.log('component father--->>>', indexDelete);
    }
 
-
-
+  async register(user: any): Promise<any> {
+   //return await this.axios.post(this.base_url + 'api/user', user);
+  }
 }

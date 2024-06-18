@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input,  Output, EventEmitter  } from '@angular/core';
 import { Character } from '../../interfaces/character.intarface';
 
 @Component({
@@ -16,6 +16,22 @@ export class ListComponent {
       power: 10
     },
   ];
+
+  @Output()
+  public onDeleteEmit: EventEmitter<number> = new EventEmitter()
+
+
+  /** este es el evento que se debe pegar en esta clase para emitir a componente hijo */
+  onDelete(indexDelete : number): void {
+   this.onDeleteEmit.emit(indexDelete)
+  }
+
+
+
+  deleteCharacter(index : number){
+    this.onDelete(index);
+    //console.log(index);
+  }
 
 
 
