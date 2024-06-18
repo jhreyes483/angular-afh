@@ -11,8 +11,8 @@
      name no valido
   </small>
 
-  <input #poder="ngModel" [(ngModel)]="character.poder" required id="poder" name="poder" class="form-control mb-2" type="number"  pattern="[0-9]+"  placeholder="poder" autocomplete="off" required>
-  <small *ngIf="!poder.valid && poder.touched" class="invalid-feedback d-block">
+  <input #power="ngModel" [(ngModel)]="character.power" required id="power" name="power" class="form-control mb-2" type="number"  pattern="[0-9]+"  placeholder="power" autocomplete="off" required>
+  <small *ngIf="!power.valid && power.touched" class="invalid-feedback d-block">
       Ingresa solo números
   </small>
 

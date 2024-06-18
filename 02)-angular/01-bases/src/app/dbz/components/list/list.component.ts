@@ -18,21 +18,17 @@ export class ListComponent {
   ];
 
   @Output()
-  public onDeleteEmit: EventEmitter<number> = new EventEmitter()
-
+  public deleteCharecterById: EventEmitter<string> = new EventEmitter()
 
   /** este es el evento que se debe pegar en esta clase para emitir a componente hijo */
-  onDelete(indexDelete : number): void {
-   this.onDeleteEmit.emit(indexDelete)
+  onDelete(indexDelete : string): void {
+   this.deleteCharecterById.emit(indexDelete)
   }
 
-
-
-  deleteCharacter(index : number){
+  deleteCharacter(index : string){
     this.onDelete(index);
     //console.log(index);
   }
-
 
 
 }
