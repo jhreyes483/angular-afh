@@ -10,7 +10,7 @@ export class Dbz {
 
 
 @Component({
-  selector: 'app-add-character',
+  selector: 'dbz-add-character',
   templateUrl: './add-character.component.html',
   styleUrl: './add-character.component.css'
 })
