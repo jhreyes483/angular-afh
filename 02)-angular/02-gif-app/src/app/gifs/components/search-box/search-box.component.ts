@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-
+import { GifsService } from '../../services/gifs.service'
 @Component({
   selector: 'gifs-search-box',
   template: `
@@ -14,7 +14,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class SearchBoxComponent {
 
-  constructor(){
+  constructor(
+    private _gifsService : GifsService
+  ){
 
   }
   @ViewChild('txtTagInput')
@@ -24,6 +26,8 @@ export class SearchBoxComponent {
   searchTag(){
     const newTag = this.tagInput.nativeElement.value;
     console.log({newTag})
+    this._gifsService.searchTag(newTag)
+    this.tagInput.nativeElement.value = '';
   }
 
 }
