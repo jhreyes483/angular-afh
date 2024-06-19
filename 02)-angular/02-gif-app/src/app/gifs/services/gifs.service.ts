@@ -1,14 +1,25 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { SearchResponse, Gif } from '../interfaces/gifs.intefaces';
+// url para tipar data https://quicktype.io/agregar a
 
 @Injectable({ providedIn: 'root' })
 export class GifsService {
 
-  constructor() {
+  constructor(
+    private http: HttpClient
+  ) {
 
   }
 
+
+    public gifList: Gif[] = [];
+
   /** Se hace de esta forma para que solo sa modificable desde el servicio */
   private _tagsHistory: string[] = [];
+  private apiKey: string = '9nKuUhaeyIjdhvBnm8ZfRtlnSvC8VHKU';
+  private serviceUrl : string =  'https://api.giphy.com/v1/gifs';
+
   get tagsHistory() {
     return [...this._tagsHistory]
   }
@@ -16,6 +27,17 @@ export class GifsService {
 
   public searchTag(tag: string): void {
     if(tag.length === 0) return;
+    const params = new HttpParams()
+    .set('api_key', this.apiKey)
+    .set('limit', '10')
+    .set('q', tag)
+
+    this.http.get<SearchResponse>(this.serviceUrl + '/search', {params: params})
+    .subscribe(resp =>{
+      this.gifList = resp.data;
+      console.log()
+    })
+
 
     this.organizeHistory(tag)
     console.log(this._tagsHistory)
