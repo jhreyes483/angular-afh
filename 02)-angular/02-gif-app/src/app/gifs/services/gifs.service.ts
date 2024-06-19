@@ -9,18 +9,21 @@ export class GifsService {
   constructor(
     private http: HttpClient
   ) {
+
   }
+
 
   public gifList: Gif[] = [];
 
   /** Se hace de esta forma para que solo sa modificable desde el servicio */
   private _tagsHistory: string[] = [];
-  private apiKey: string = '9nKuUhaeyIjdhvBnm8ZfRtlnSvC8VHKU';
+  private apiKey: string = '6tQM5ah5jWJ5IZGZHCuvTMBa003aeJeY';
   private serviceUrl: string = 'https://api.giphy.com/v1/gifs';
 
   get tagsHistory() {
     return [...this._tagsHistory]
   }
+
 
   public searchTag(tag: string): void {
     if (tag.length === 0) return;
@@ -46,5 +49,9 @@ export class GifsService {
     this._tagsHistory.unshift(tag) // inserta el tag de primeras
     this._tagsHistory = this.tagsHistory.splice(0, 10); // deja los primeros 10 tags
   }
+
+
+
+
 
 }
