@@ -12,7 +12,7 @@
 ## genrar un modulo
 - ng g m moduleName
 ## generar un componente
-- ng g c moduleName/components/componentName
+- ng g c moduleName/components/componentName --skip-tests
 
 ### atajos extención 
 - a-component: crea ts componente 
