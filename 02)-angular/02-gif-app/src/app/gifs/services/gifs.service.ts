@@ -9,53 +9,42 @@ export class GifsService {
   constructor(
     private http: HttpClient
   ) {
-
   }
 
-
-    public gifList: Gif[] = [];
+  public gifList: Gif[] = [];
 
   /** Se hace de esta forma para que solo sa modificable desde el servicio */
   private _tagsHistory: string[] = [];
   private apiKey: string = '9nKuUhaeyIjdhvBnm8ZfRtlnSvC8VHKU';
-  private serviceUrl : string =  'https://api.giphy.com/v1/gifs';
+  private serviceUrl: string = 'https://api.giphy.com/v1/gifs';
 
   get tagsHistory() {
     return [...this._tagsHistory]
   }
 
-
   public searchTag(tag: string): void {
-    if(tag.length === 0) return;
+    if (tag.length === 0) return;
     const params = new HttpParams()
-    .set('api_key', this.apiKey)
-    .set('limit', '10')
-    .set('q', tag)
+      .set('api_key', this.apiKey)
+      .set('limit', '10')
+      .set('q', tag)
 
-    this.http.get<SearchResponse>(this.serviceUrl + '/search', {params: params})
-    .subscribe(resp =>{
-      this.gifList = resp.data;
-      console.log()
-    })
-
-
+    this.http.get<SearchResponse>(this.serviceUrl + '/search', { params: params })
+      .subscribe(resp => {
+        this.gifList = resp.data;
+      })
     this.organizeHistory(tag)
-    console.log(this._tagsHistory)
   }
 
-  private organizeHistory(tag : string) : void{
+  private organizeHistory(tag: string): void {
     tag = tag.toLowerCase(); // deja todo en minúscula
 
-    if(this._tagsHistory.includes(tag)){
+    if (this._tagsHistory.includes(tag)) {
       /** si ya existe esto en el array lo borra */
       this._tagsHistory = this._tagsHistory.filter((oldTag) => oldTag != tag)
     }
     this._tagsHistory.unshift(tag) // inserta el tag de primeras
-    this._tagsHistory =  this.tagsHistory.splice(0,10); // deja los primeros 10 tags
+    this._tagsHistory = this.tagsHistory.splice(0, 10); // deja los primeros 10 tags
   }
-
-
-
-
 
 }
