@@ -1,25 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import {SharedModule} from './shared/shared.module';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ByCapitalPageComponent } from './countries/page/by-capital-page/by-capital-page.component';
 
+/** componentes creados */
+import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ByCapitalPageComponent,
-
   ],
   imports: [
     /** modulos */
     SharedModule,
-
+    HttpClientModule, /** ojo este debe ir siempre que se quiera usar el httpClient como service */
     BrowserModule,
     AppRoutingModule
   ],

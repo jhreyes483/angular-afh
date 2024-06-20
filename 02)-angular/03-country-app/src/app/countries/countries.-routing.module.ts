@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-
+/** componentes creados */
 import { ByCapitalPageComponent } from './page/by-capital-page/by-capital-page.component';
 import { ByCountryPageComponent } from './page/by-country-page/by-country-page.component';
 import { ByRegionPageComponent } from './page/by-region-page/by-region-page.component';
