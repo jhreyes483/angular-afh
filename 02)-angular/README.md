@@ -19,3 +19,6 @@
 
 ### build
 - ng build
+
+## generar modulo con routing
+- ng g module products --routing
