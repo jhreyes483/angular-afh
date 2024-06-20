@@ -21,8 +21,13 @@ const routes: Routes = [
     component: ContactComponent
   },
   {
+    path: 'countries',
+    loadChildren: () => import('./countries/countries.module').then( m => m.CountriesModule )
+    // https://www.udemy.com/course/angular-fernando-herrera/learn/lecture/23754956#overview vide fuente
+  },
+  {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'countries'
   }
 ];
 
