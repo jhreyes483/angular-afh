@@ -6,6 +6,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
 
 
 
@@ -17,6 +18,7 @@ import { ContactComponent } from './components/contact/contact.component';
     HomePageComponent,
     SidebarComponent,
     ContactComponent,
+    SearchBoxComponent,
 
   ],
   imports: [
@@ -27,7 +29,8 @@ import { ContactComponent } from './components/contact/contact.component';
     AboutPageComponent,
     HomePageComponent, /** siempre se debe exportar un modulo por lo menos el principal */
     SidebarComponent,
-    ContactComponent
+    ContactComponent,
+    SearchBoxComponent,/** ojo hacer esta exportación para componente global */
   ]
 })
 export class SharedModule { }

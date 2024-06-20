@@ -21,7 +21,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     CountriesRoutingModule, /** ojo siempre colocar acá los router hijos o independiente de cada modulo */
-    SharedModule,
+    SharedModule,/** modulo global */
   ]
 })
 export class CountriesModule { }
