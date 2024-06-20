@@ -1,3 +1,4 @@
+<h4>Por Capital</h4>
 <hr>
 
 <div class="row">
@@ -5,7 +6,10 @@
 
     <shared-search-box
     [placeholder]="'Buscar capital'"
+    (onValue)="searchByCapital($event)"
     ></shared-search-box>
+
+    <br>
   </div>
 </div>
 

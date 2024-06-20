@@ -1,7 +1,9 @@
 <input
 class="form-control"
 [placeholder]="placeholder"
+(keyup.enter)="emitValue(txtInput.value)"
+#txtInput
 type="text"
-name=""
-id=""
+name="txtInput"
+id="txtInput"
 >
