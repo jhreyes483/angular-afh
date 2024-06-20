@@ -1,1 +1,27 @@
-<p>by-country-page works!</p>
+<h4>{{ title }}</h4>
+<hr>
+
+<div class="row">
+  <div class="col">
+
+    <shared-search-box
+    [placeholder]="placeholder"
+    (onValue)="searchByTerm($event)"
+    ></shared-search-box>
+
+    <br>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <ul>
+      <countries-table
+      [countries]="countries"
+      >
+      </countries-table>
+    </ul>
+
+  </div>
+  <hr>
+</div>

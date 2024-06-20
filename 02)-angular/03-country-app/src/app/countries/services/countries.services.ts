@@ -10,14 +10,46 @@ export class CountryService {
   constructor(private _http: HttpClient) { }
 
 
+  searchCountryByAlphaCode(code: string): Observable<Country[]>{
+    return this._http.get<Country[]>(this.apiUrl + '/alpha/' + code)
+    .pipe(
+      catchError(error => {
+        console.log(error)
+        return of([])
+      })
+    )
+  }
+
+
   searchCapital(term: string): Observable<Country[]> {
     return this._http.get<Country[]>(this.apiUrl + '/capital/' + term)
       .pipe(
         catchError(error => {
-            console.log(error)
-            return of([])
-          }
-        )
+          console.log(error)
+          return of([])
+        })
       )
   }
+
+  searchCountry(term:string) : Observable<Country[]>{
+    return this._http.get<Country[]>(this.apiUrl + '/name/'+term)
+    .pipe(
+      catchError(error => {
+        console.log(error)
+        return of([])
+      })
+    )
+  }
+
+  searchRegion(region:string) : Observable<Country[]>{
+    return this._http.get<Country[]>(this.apiUrl + '/region/'+region)
+    .pipe(
+      catchError(error => {
+        console.log(error)
+        return of([])
+      })
+    )
+  }
+
+
 }
