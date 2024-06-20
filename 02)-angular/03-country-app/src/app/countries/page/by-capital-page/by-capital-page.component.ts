@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CountryService } from '../../components/countries.services';
+import { Component, OnInit } from '@angular/core';
+import { CountryService } from '../../services/countries.services';
 import { Country } from '../../interfaces/country';
 
 @Component({
@@ -7,7 +7,7 @@ import { Country } from '../../interfaces/country';
   templateUrl: './by-capital-page.component.html',
   styleUrl: './by-capital-page.component.css'
 })
-export class ByCapitalPageComponent {
+export class ByCapitalPageComponent  {
   public countries: Country[] = [];
 
   constructor(
@@ -23,5 +23,6 @@ export class ByCapitalPageComponent {
 
     console.log('serchCapital -->', value);
   }
+
 
 }
