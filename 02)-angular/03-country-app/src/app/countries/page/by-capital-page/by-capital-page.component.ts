@@ -7,13 +7,15 @@ import { Country } from '../../interfaces/country';
   templateUrl: './by-capital-page.component.html',
   styleUrl: './by-capital-page.component.css'
 })
-export class ByCapitalPageComponent  {
+export class ByCapitalPageComponent implements OnInit {
   public countries: Country[] = [];
   public isLoading : boolean = false;
+  public inputSearcInitialValue : string = '';
 
   constructor(
     private _countryService: CountryService
   ) { }
+
 
   searchByCapital(value: string): void {
     this.isLoading = true;
@@ -27,5 +29,9 @@ export class ByCapitalPageComponent  {
     console.log('serchCapital -->', value);
   }
 
+  ngOnInit(): void {
+    this.countries = this._countryService.cacheStore.byCapital.countries;
+    this.inputSearcInitialValue = this._countryService.cacheStore.byCapital.term;
+  }
 
 }

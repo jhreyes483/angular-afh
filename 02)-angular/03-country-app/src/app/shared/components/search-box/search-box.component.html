@@ -1,6 +1,7 @@
 <input
 class="form-control"
 [placeholder]="placeholder"
+[value]="inputSearcInitialValue"
 (keyup.enter)="emitValue(txtInput.value)"
 (keyup)="onKeyPress(txtInput.value)"
 #txtInput

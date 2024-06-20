@@ -11,6 +11,7 @@ export class ByCountryPageComponent {
   public countries: Country[] = [];
   public title : string ='Por country';
   public placeholder: string = 'busqueda por country';
+  public inputSearcInitialValue : string = '';
 
   constructor(
     private _countryService: CountryService
@@ -24,6 +25,11 @@ export class ByCountryPageComponent {
       })
 
     console.log('serchCapital -->', value);
+  }
+
+  ngOnInit(): void {
+    this.countries = this._countryService.cacheStore.byCountries.countries
+    this.inputSearcInitialValue = this._countryService.cacheStore.byCountries.term;
   }
 
 }
