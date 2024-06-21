@@ -10,6 +10,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { MaterialModule } from '../material/material.module';
 import { CardComponent } from './components/card/card.component';
 import { HeroImagePipe } from './pipes/hero-image.pipe';
+import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -28,6 +29,8 @@ import { HeroImagePipe } from './pipes/hero-image.pipe';
     CommonModule,
     HeroesRoutingModule,
     MaterialModule, /** OJO importante para que lea los estilos de material este modulo */
+    ReactiveFormsModule, /** Inportante para formularios */
+    FormsModule
 
   ]
 })
