@@ -9,6 +9,7 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { MaterialModule } from '../material/material.module';
 import { CardComponent } from './components/card/card.component';
+import { HeroImagePipe } from './pipes/hero-image.pipe';
 
 
 @NgModule({
@@ -18,12 +19,16 @@ import { CardComponent } from './components/card/card.component';
     ListPageComponent,
     NewPageComponent,
     SearchPageComponent,
-    CardComponent
+    CardComponent,
+    /* Pipes */
+    HeroImagePipe
+
   ],
   imports: [
     CommonModule,
     HeroesRoutingModule,
-    MaterialModule /** OJO importante para que lea los estilos de material este modulo */
+    MaterialModule, /** OJO importante para que lea los estilos de material este modulo */
+
   ]
 })
 export class HeroesModule { }
