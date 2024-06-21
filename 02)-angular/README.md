@@ -24,8 +24,12 @@
 ## generar modulo con routing
 - ng g module products --routing
 
+## generar serve
+- desde sniped a-service-httpclient
 
 ## JSON SERVE SOLO DESARROLLO "CREA ENPOINTS VIRTUALES DE PRUEBA APARTIR DE UN JSON"
 - npm i json-server
 - en package.json crear comanod "backend": "json-server --watch data/db.json", y crear el archivo correspondiente
+
+
 
