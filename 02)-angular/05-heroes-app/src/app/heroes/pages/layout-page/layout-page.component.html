@@ -1,3 +1,59 @@
-<p>layout-page works!</p>
-<!-- Ojo se debe colocar para que muestre las rutas hijas, ya que todas llegan a este componente -->
-<router-outlet></router-outlet>
+<mat-sidenav-container fullscreen >
+
+  <mat-sidenav  #sidenav  mode="push" [ngStyle]="{ width: '250px' }"  >
+    <mat-toolbar>
+      <span>Menú</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon >menu</mat-icon>
+      </button>
+
+    </mat-toolbar>
+
+    <mat-nav-list  >
+      <mat-list-item
+        *ngFor="let item of sidebarItems"
+        [routerLink]="item.url"
+        (click)="sidenav.toggle()"
+      >
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        {{ item.label }}
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+
+  <mat-toolbar color="primary" class="bg-nav">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon class="text-white">menu</mat-icon>
+    </button>
+
+    <span class="spacer"></span>
+
+    <button mat-button color="primary" class="text-white">
+      Logout
+    </button>
+
+  </mat-toolbar>
+
+
+  <div class="container p-2" >
+
+    <router-outlet></router-outlet>
+
+  </div>
+
+<!--
+  <button mat-button mat-flat-button color="primary">
+    <mat-icon>save</mat-icon>
+    Ingresarxxx
+  </button>
+-->
+
+</mat-sidenav-container>
+
+
+
+
+
