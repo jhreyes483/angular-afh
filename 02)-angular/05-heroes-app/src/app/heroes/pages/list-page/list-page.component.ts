@@ -15,6 +15,7 @@ export class ListPageComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getHeroes()
+    console.log( 'heroes--->>>',this.heroes)
   }
 
   getHeroes(){
