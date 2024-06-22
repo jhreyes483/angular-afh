@@ -166,6 +166,15 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "Javier",
+      "superhero": "Javier",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Reyes",
+      "first_appearance": "2016 en el sena",
+      "characters": "El dev, develop, backend, front",
+      "alt_img": "https://cdn.donmai.us/original/a8/da/__strider_hiryuu_grand_master_meio_and_anihilate_uroboros_strider_drawn_by_genzoman__a8da9eaa2df50d322d91be9f74dc2d6a.jpg"
     }
   ]
 }
