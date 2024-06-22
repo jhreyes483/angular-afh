@@ -30,8 +30,10 @@
     </button>
 
     <span class="spacer"></span>
-
-    <button mat-button color="primary" class="text-white">
+    <span *ngIf="user" >{{  user.email }}</span>
+     <button
+     (click)="onLogout()"
+     mat-button color="primary" class="text-white">
       Logout
     </button>
 
