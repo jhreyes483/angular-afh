@@ -12,38 +12,41 @@
 
   <mat-card class="col-12 sm:col-6">
 
-    <mat-card-header>
-      <mat-card-title>{{ hero.alter_ego }}</mat-card-title>
+    <div class="text-center card-body-jav" >
+      <mat-card-title class="text-blue-dark">{{ hero.alter_ego }}</mat-card-title>
       <mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
-    </mat-card-header>
+    </div>
 
 
-    <img [src]="hero | heroImage" [alt]="hero.superhero" mat-card-image  />
+    <img class="img-detail-hero img-radius"  [src]="hero | heroImage" [alt]="hero.superhero" mat-card-image  />
 
   </mat-card>
 
   <mat-card class="col-12 sm:col-6">
 
-    <mat-card-header>
-      <mat-card-title>Información</mat-card-title>
+    <div class="text-center card-body-jav" >
+      <mat-card-title class="text-blue-dark">Información</mat-card-title>
       <mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
-    </mat-card-header>
+    </div>
+    <br>
 
     <mat-card-content>
-      <mat-list>
+      <mat-list class="card-jav">
         <mat-list-item>{{ hero.first_appearance }}</mat-list-item>
         <mat-list-item>{{ hero.characters }}</mat-list-item>
         <mat-list-item>{{ hero.publisher }}</mat-list-item>
         <mat-list-item>{{ hero.alter_ego }}</mat-list-item>
       </mat-list>
+      <br>
+      <div class="text-center">
+        <button class="btn-primary btn "
 
-      <button
-        mat-button
         color="warn"
         (click)="goBack()"
       >
         Regresar
       </button>
+      </div>
 
     </mat-card-content>
 

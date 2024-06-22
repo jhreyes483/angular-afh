@@ -12,6 +12,7 @@ import { CardComponent } from './components/card/card.component';
 import { HeroImagePipe } from './pipes/hero-image.pipe';
 import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { TextTruncatePipe } from './pipes/hero-text-truncate';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     SearchPageComponent,
     CardComponent,
     /* Pipes */
+    TextTruncatePipe,
     HeroImagePipe,
     ConfirmDialogComponent
 

@@ -1,12 +1,208 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.spacer{
+/* Estilos base del botón */
+.btn {
+
+  margin-top: 5px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.50rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.60rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+  color: #fff;
+  background-color: #7d3cff;
+  /* Base de color morado */
+  border-color: #7d3cff;
+  /* Color del borde morado */
+}
+
+
+/* Estilos para el botón primario */
+.btn-primary {
+  color: #fff;
+  background-color: #7d3cff;
+  /* Base de color morado */
+  border-color: #7d3cff;
+  /* Color del borde morado */
+}
+
+.btn-primary:hover {
+  background-color: #6a2cb8;
+  /* Tonos más oscuro al hacer hover */
+  border-color: #6a2cb8;
+}
+
+/* Estilos para el botón pequeño */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+.btn-sm:hover {
+  filter: brightness(85%);
+  /* Reduce el brillo al hacer hover */
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mt-1 {
+  margin-top: 1;
+}
+
+.mt-2 {
+  margin-top: 2;
+}
+
+.mt-3 {
+  margin-top: 3;
+}
+
+.mt-4 {
+  margin-top: 4;
+}
+
+.mt-5 {
+  margin-top: 5;
+}
+
+.mt-6 {
+  margin-top: 6;
+}
+
+.mt-7 {
+  margin-top: 7;
+}
+.p-1{
+  padding: 1px !important;
+}
+
+.container-text-center {
+  display: flex;
+  flex-direction: column;
+  /* Asegura que los elementos se apilen verticalmente */
+  justify-content: center;
+  /* Centra verticalmente el contenido */
+  align-items: center;
+  /* Centra horizontalmente el contenido */
+  text-align: center;
+}
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.spacer {
   flex: 1 1 auto
 }
-.bg-nav{
+
+.bg-nav {
   background-color: blueviolet !important;
   color: white !important
 }
+
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.card-body-jav {
+  padding: 12px;
+}
+
+.img-detail-hero {
+  height: 800px;
+  /* Altura deseada */
+  width: auto;
+  /* Ancho automático para mantener la relación de aspecto */
+  object-fit: cover;
+  /* Cubre el contenedor manteniendo la relación de aspecto */
+}
+
+.img-radius {
+  border-radius: 1em;
+}
+
+.card-jav {
+  border: 1.2px solid #788be0;
+  padding: 30px;
+  border-radius: 1em;
+  margin: 3px;
+  background-color: #f8f9fc;
+}
+
+.text-blue-dark {
+  color: #190a8f !important;
+}
+
+
+.container-brages {
+  height: 100px;
+  /* Altura del contenedor (opcional) */
+  text-align: center !important;
+}
+
+.item-brage {
+  border-radius: 10px;
+  margin: 5px;
+  background-color: #f8f9fc;
+  border: 1.2px solid #788be0;
+  padding: 5px;
+}
+
+.size-13 {
+  font-size: 13px;
+}
+
+.size-15 {
+  font-size: 15px !important;
+}
+
+
+.size-20 {
+  font-size: 20px !important;
+}
+
+
+.img-list-h {
+  height: 330px !important;
+}
+
+@media (max-width: 1200px) {
+  .img-list-h{
+    height: 720px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .img-list-h{
+    height: 900px !important;
+  }
+}
+
