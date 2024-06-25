@@ -9,9 +9,9 @@ export class ValidatorService {
 
  cantBeStrider = (control: FormControl): ValidationErrors | null => {
     const value: string = control.value.trim().toLowerCase()
-    console.log('--', value, control.value)
+    //console.log('--', value, control.value)
     if (value === 'strider') {
-      console.log('es strider')
+      //console.log('es strider')
       return {
         noStrider: true
       }
@@ -21,7 +21,7 @@ export class ValidatorService {
 
   isValidField(form : FormGroup, field: string){
     const r = form.controls[field] && form.controls[field].errors && form.controls[field].touched;
-    if(r) console.log('r-- ', r, field)
+    //if(r) console.log('r-- ', r, field)
     return r
   }
 
@@ -37,10 +37,10 @@ export class ValidatorService {
     if ( !form.controls[field] ) return null;
 
     const errors = form.controls[field].errors || {};
-    console.log(errors )
+    //console.log(errors )
 
     for (const key of Object.keys(errors) ) {
-      console.log('key--',key)
+      //console.log('key--',key)
       switch( key ) {
         case 'required':
           return 'Este campo es requerido';
@@ -56,6 +56,9 @@ export class ValidatorService {
 
         case 'min':
           return `Valor mínimo ${errors['min'].min }.`
+
+        case 'emailTaken':
+          return 'email no valido..'
       }
     }
     return '';
