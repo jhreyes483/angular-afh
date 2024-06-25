@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators, FormGroup } from '@angular/forms';
+import { ValidatorService } from '../../../shared/service/validators.service';
 
 @Component({
 
@@ -27,7 +28,10 @@ export class BasicPageComponent implements OnInit {
     isStorage: [0, [Validators.required, Validators.min(0)]]
   })
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private _validatorService : ValidatorService
+  ) { }
   ngOnInit(): void {
     /** valores por default */
     this.myForm.reset({
@@ -38,31 +42,11 @@ export class BasicPageComponent implements OnInit {
   }
 
   isNotValifField( field : string) : boolean | null{
-    return this.myForm.controls[field]
-    && this.myForm.controls[field].errors
-    && this.myForm.controls[field].touched
+    return this._validatorService.isValidField(this.myForm, field)
   }
 
-  getFieldError(field: string):string  {
-    if(! this.myForm.controls[field]) return '';
-
-    const errors = (this.myForm.controls[field] && this.myForm.controls[field].errors) || {};
-    for (const key of Object.keys(errors)) {
-      switch(key){
-        case 'required':
-          return 'Este campo es requerido.';
-
-      case 'minlength':
-        return `Minimo ${errors['minlength'].requiredLength } caracteres.`
-
-      case 'min':
-        return `Valor mínimo ${errors['min'].min }.`
-
-      default :
-        return '';
-      }
-    }
-    return '';
+  getFieldError(field: string):string | null {
+    return this._validatorService.getFieldError(this.myForm, field)
   }
 
   onSave(): void {
