@@ -16,6 +16,11 @@ export class RegisterComponent {
     username: ['', [Validators.required, this._validatorService.cantBeStrider]],
     password: ['',[Validators.required,  Validators.minLength(6)  ] ],
     password2:['', [Validators.required]]
+  },{
+    /** validaciones no async aplicadas a todo el form */
+    validator : [
+      this._validatorService.isFieldOneEqualFieldTwo('password', 'password2')
+    ]
   });
 
 
