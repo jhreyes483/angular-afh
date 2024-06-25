@@ -19,6 +19,7 @@ export class ValidatorService {
     return null
   }
 
+
   isValidField(form : FormGroup, field: string){
     const r = form.controls[field] && form.controls[field].errors && form.controls[field].touched;
     //if(r) console.log('r-- ', r, field)
